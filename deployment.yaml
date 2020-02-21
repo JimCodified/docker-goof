@@ -1,0 +1,15 @@
+ apiVersion: extensions/v1beta1
+ kind: Deployment
+ metadata:
+   name: kube-goof-wp
+   annotations:
+      orgs.k8s.snyk.io/v1: 847fc4c7-8597-4a5c-8443-8b411c2dd0ba
+ spec:
+   template:
+     metadata:
+       labels:
+         app: goof-wp
+     spec:
+        containers:
+          - name: wp
+            image: 319788258258.dkr.ecr.us-east-2.amazonaws.com/snyk-goof:wp

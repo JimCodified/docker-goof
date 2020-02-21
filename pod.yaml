@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: kube-goof-wp
+  annotations:
+    orgs.k8s.snyk.io/v1: 847fc4c7-8597-4a5c-8443-8b411c2dd0ba
+  labels:
+    app: goof-wp
+spec:
+  containers:
+    - name: goof-wp
+      image: 319788258258.dkr.ecr.us-east-2.amazonaws.com/snyk-goof:wp

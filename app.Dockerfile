@@ -9,3 +9,7 @@ RUN apt-get update
 
 # Install package which its vulnerabilities would show up in the layers filter
 RUN apt-get -y install exiv2
+
+ENTRYPOINT ["docker-entrypoint.sh"]
+EXPOSE 2368
+CMD ["node" "current/index.js"]
