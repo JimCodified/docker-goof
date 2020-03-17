@@ -20,12 +20,15 @@ spec:
 
 
 ---
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: goof
 spec:
-  replicas: 3
+  replicas: 2
+  selector:
+    matchLabels:
+      app: goof
   strategy: {}
   template:
     metadata:
@@ -38,7 +41,13 @@ spec:
         ports:
         - containerPort: 3001
         - containerPort: 9229
-        resources: {}
+        resources: 
+          requests:
+            memory: "8Mi"
+            cpu: "100m"
+          limits:
+            memory: "64Mi"
+            cpu: "200m"
         env: 
           - name: "DOCKER"
             value: "1"

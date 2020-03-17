@@ -9,4 +9,4 @@ metadata:
 spec:
   containers:
     - name: goof-wp
-      image: 319788258258.dkr.ecr.us-east-2.amazonaws.com/snyk-goof:wp
+      image: jdarmstro/snyk-goof:wp
